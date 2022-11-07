@@ -52,9 +52,15 @@ public class MainActivity extends AppCompatActivity {
         });
 
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            String  hour = String.valueOf(LocalDateTime.now().getHour());
+            String hour = String.valueOf(LocalDateTime.now().getHour());
+            Log.d("hour",hour);
             LocalDate date = LocalDate.now();
-            currentdate =  String.valueOf(date).concat("T"+hour+":00");
+            if (hour.equals("0") || hour.equals("1") || hour.equals("2") || hour.equals("3") || hour.equals("4") || hour.equals("5") || hour.equals("6") || hour.equals("7") || hour.equals("8") || hour.equals("9")){
+                currentdate =  String.valueOf(date).concat("T0"+hour+":00");
+            }else{
+                currentdate =  String.valueOf(date).concat("T"+hour+":00");
+            }
+
         }
 
         Log.d("currentdate",currentdate);
@@ -69,11 +75,12 @@ public class MainActivity extends AppCompatActivity {
 
                 Log.d("tag", String.valueOf(resp.getHourlyTime().getHourlyTimeArrayList().get(1)));
 
-                for (int i=0;i<24;i++){
+                for (int i=0;i<resp.getHourlyTime().getHourlyTimeArrayList().size();i++){
                     Log.d("all", String.valueOf(resp.getHourlyTime().getHourlyTimeArrayList().get(i)));
                     if (resp.getHourlyTime().getHourlyTimeArrayList().get(i).equals(currentdate)){
                         Log.d("now",String.valueOf(resp.getHourlyTime().getHourlyTimeArrayList().get(i)));
                         currenttemp = resp.getHourlyTime().getTemperature().get(i);
+                        Log.d("now",""+currenttemp);
                         temp.setText(currenttemp+" °C");
                     }
                 }
