@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RPMAnetworks مكتشف</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="your_location">موقعك</string>
+    <string name="rpmanetworks">RPMAnetworks</string>
+    <string name="get_route_to_rpmanetworks">احصل على الطريق إلى RPMAnetworks</string>
+    <string name="get_route_to_rpmanetworks_in_google_maps">احصل على المسار إلى RPMAnetworks في خرائط Google</string>
+    <string name="get_me_to_rpmanetworks">أوصلني إلى RPMAnetworks</string>
+    <string name="temperature">درجة الحرارة</string>
+</resources>

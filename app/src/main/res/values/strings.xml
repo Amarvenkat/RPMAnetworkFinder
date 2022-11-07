@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">RPMAnetworks Finder</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="your_location">Your Location</string>
+    <string name="rpmanetworks">RPMAnetworks</string>
+    <string name="get_route_to_rpmanetworks">Get Route to RPMAnetworks</string>
+    <string name="get_route_to_rpmanetworks_in_google_maps">Get Route to RPMAnetworks in Google Maps</string>
+    <string name="get_me_to_rpmanetworks">Get me to RPMAnetworks</string>
+    <string name="temperature">Temperature</string>
+</resources>
